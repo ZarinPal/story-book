@@ -1,0 +1,53 @@
+@import "../gloabal/variables";
+
+.pagination {
+  direction: rtl;
+  margin: 100px auto;
+  text-align: center;
+
+  .first-page, .last-page {
+    a {
+      font-size: 12px;
+    }
+  }
+
+
+
+  .icon-chevron-left-Pagination,.icon-chevron-right-Pagination {
+    &:before {
+      margin-left: 0;
+      padding: 5px;
+      border: 1px solid $gray;
+      box-sizing: border-box;
+      box-shadow: 0 4px 8px rgb(19 37 71 / 10%);
+      color: $darkgrey;
+      border-radius: 10px;
+      font-size: 22px;
+      font-size: 22px;
+      background: $whiteColor;
+    }
+  }
+
+
+  li {
+    list-style: none;
+    display: inline-block;
+
+
+    a {
+      margin: 11px;
+      color: $dimGray;
+      font-size: 14px;
+      font-family: 'IRANYekanMedium', sans-serif;
+
+      &.active {
+        padding: 7px 12px;
+        background: $primaryColor;
+        box-shadow: 0 4px 8px rgba(19, 37, 71, 0.102);
+        border-radius: 10px;
+        color: $whiteColor;
+      }
+    }
+
+  }
+}

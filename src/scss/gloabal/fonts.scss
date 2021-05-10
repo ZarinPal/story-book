@@ -1,0 +1,115 @@
+@font-face {
+  font-family: IRANYekanRegular;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/eot/iranyekanwebregularfanum.eot');
+  src: url('../fonts/eot/iranyekanwebregularfanum.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/woff/iranyekanwebregularfanum.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/svg/iranyekanwebregularfanum.svg') format('svg'),
+  url('../fonts/ttf/iranyekanwebregularfanum.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: IRANYekanBold;
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/eot/iranyekanwebextraboldfanum.eot');
+  src: url('../fonts/eot/iranyekanwebboldfanum.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/woff/iranyekanwebboldfanum.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/svg/iranyekanwebboldfanum.svg') format('svg'),
+  url('../fonts/ttf/iranyekanwebboldfanum.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: IRANYekanExtraBold;
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/eot/iranyekanwebextraboldfanum.eot');
+  src: url('../fonts/eot/iranyekanwebextraboldfanum.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/woff/iranyekanwebextraboldfanum.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/svg/iranyekanwebextraboldfanum.svg') format('svg'),
+  url('../fonts/ttf/iranyekanwebextraboldfanum.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: IRANYekanMedium;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/eot/iranyekanwebmediumfanum.eot');
+  src: url('../fonts/eot/iranyekanwebmediumfanum.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/woff/iranyekanwebmediumfanum.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/svg/iranyekanwebmediumfanum.svg') format('svg'),
+  url('../fonts/ttf/iranyekanwebmediumfanum.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: IRANYekanLight;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/eot/iranyekanweblightfanum.eot');
+  src: url('../fonts/eot/iranyekanweblightfanum.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/woff/iranyekanweblightfanum.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/svg/iranyekanweblightfanum.svg') format('svg'),
+  url('../fonts/ttf/iranyekanweblightfanum.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: IRANYekanBlack;
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/eot/iranyekanwebblackfanum.eot');
+  src: url('../fonts/eot/iranyekanwebblackfanum.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/woff/iranyekanwebblackfanum.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/svg/iranyekanwebblackfanum.svg') format('svg'),
+  url('../fonts/ttf/iranyekanwebblackfanum.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: IRANYekanExtraBlack;
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/eot/iranyekanwebextrablackfanum.eot');
+  src: url('../fonts/eot/iranyekanwebextrablackfanum.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/woff/iranyekanwebextrablackfanum.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/svg/iranyekanwebextrablackfanum.svg') format('svg'),
+  url('../fonts/ttf/iranyekanwebextrablackfanum.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: IRANYekanThin;
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/eot/iranyekanwebthinfanum.eot');
+  src: url('../fonts/eot/iranyekanwebthinfanum.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/woff/iranyekanwebthinfanum.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/svg/iranyekanwebthinfanum.svg') format('svg'),
+  url('../fonts/ttf/iranyekanwebthinfanum.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: RobotoMono;
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/ttf/RobotoMono-Medium.ttf');
+}
+@font-face {
+  font-family: IRANYekanWebMedium;
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/ttf/IRANYekanWebMedium.ttf')format('truetype');
+}
+
+
+@font-face {
+  font-family: 'fontIcon';
+  src: url('../fonts/fontIcon/ZarinPal.eot');
+  src: url('../fonts/fontIcon/ZarinPal.eot') format('embedded-opentype'),
+  url('../fonts/fontIcon/ZarinPal.ttf') format('truetype'),
+  url('../fonts/fontIcon/ZarinPal.woff') format('woff'),
+  url('../fonts/fontIcon/ZarinPal.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+

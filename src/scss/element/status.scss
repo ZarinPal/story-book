@@ -1,0 +1,59 @@
+@import "../gloabal/variables";
+/**-------------------------------------------------------------------------------------------------------------------
+label
+-------------------------------------------------------------------------------------------------------------------- */
+
+.label {
+  padding: 6px 16px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-family: 'IRANYekanBold', serif;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  .icon-badge{
+    &:before{
+      font-weight: bold;
+      margin-left: 0;
+    }
+  }
+  .icon-multiplied-by-badge{
+    &:before{
+      font-size: 12px;
+    }
+  }
+  .icon-multiplied-by-badge{
+    &:before{
+      font-size: 19px;
+    }
+  }
+  .icon-Circle-arrow-badge{
+    &:before{
+      font-size: 19px;
+    }
+  }
+  .icon-Difference-badge{
+    &:before{
+      font-size: 17px;
+    }
+  }
+  .icon-Tick-badge{
+    &:before{
+      font-size: 17px;
+    }
+  }
+  .icon-in-pay-badge{
+    &:before{
+      font-size: 17px;
+    }
+  }
+  @each $name, $bg-color, $text-color in $status-colors {
+    &.#{$name} {
+      background: $bg-color;
+      color: $text-color;
+    }
+  }
+}
+
+
+

@@ -1,0 +1,220 @@
+@import "../gloabal/variables";
+
+
+table {
+  color: $mainColor;
+  overflow: hidden;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 10px;
+  direction: rtl;
+  td {
+    font-family: 'IRANYekanRegular', serif;
+    font-size: 13px;
+    color: $mainColor;
+  }
+  thead {
+    background-color: $theadBg;
+  }
+
+  tbody {
+    tr {
+      background: $whiteColor;
+      border-radius: 10px;
+    }
+  }
+
+  .pending {
+    color: $coral;
+  }
+  .verified-status {
+    color: $verified;
+  }
+}
+@media(max-width: 767px) {
+  td:nth-of-type(2):before {
+    content: "شناسه‌ی پرداخت	";
+  }
+  td:nth-of-type(3):before {
+    content: "مبلغ (به ریال)	";
+  }
+  td:nth-of-type(4):before {
+    content: "توضیحات";
+  }
+  td:nth-of-type(5):before {
+    content: "شناسه‌ی ارجاع";
+  }
+  td:nth-of-type(6):before {
+    content: "تاریخ و ساعت";
+  }
+  td:nth-of-type(7):before {
+    content: "وضعیت";
+  }
+  /* Force table to not be like tables anymore */
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr{
+    padding: 0 12px;
+    &:nth-of-type(even) {
+      margin: 12px auto;
+    }
+    &:nth-of-type(odd) {
+      margin: 12px auto;
+    }
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border-bottom: 1px solid $divider;
+    position: relative;
+    padding: 24px 0;
+    text-align: left;
+    line-height: 0;
+    font-size: 13px;
+    &:first-child{
+      display: none;
+    }
+    &:last-child{
+      border-bottom: none;
+    }
+
+    &::before {
+      position: absolute;
+      top: 24px;
+      right: 0;
+      white-space: nowrap;
+      color: $darkgrey;
+    }
+    a {
+      font-size: 13px;
+      margin-right: 3px;
+      color: #2D3436;
+    }
+  }
+
+}
+@media(min-width: 768px) and (max-width: 991px) {
+  td:nth-of-type(2):before {
+    content: "شناسه‌ی پرداخت	";
+  }
+  td:nth-of-type(3):before {
+    content: "مبلغ (به ریال)	";
+  }
+  td:nth-of-type(4):before {
+    content: "توضیحات";
+  }
+  td:nth-of-type(5):before {
+    content: "شناسه‌ی ارجاع";
+  }
+  td:nth-of-type(6):before {
+    content: "تاریخ و ساعت";
+  }
+  td:nth-of-type(7):before {
+    content: "وضعیت";
+  }
+  /* Force table to not be like tables anymore */
+  table, thead, tbody, th, td, tr {
+    display: block;
+    tr {
+      margin: 6px  !important;
+
+      &:nth-of-type(odd), &:nth-of-type(even) {
+        width: 45%;
+        display: inline-block;
+        padding: 0 12px;
+      }
+
+    }
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+
+  td {
+    /* Behave  like a "row" */
+    border-bottom: 1px solid $divider;
+    position: relative;
+    padding: 21px 8px;
+    text-align: left;
+    line-height: 6px;
+    font-size: 14px;
+    &:first-child{
+      display: none;
+    }
+    &:last-child{
+      border-bottom: none;
+    }
+    &::before {
+      position: absolute;
+      top: 20px;
+      right: 8px;
+      white-space: nowrap;
+      color: $darkgrey;
+    }
+
+    a {
+      font-size: 13px;
+      margin-right: 3px;
+      color: #2D3436;
+    }
+  }
+
+
+
+
+}
+
+@media (min-width: 992px){
+  table{
+    background: $whiteColor;
+    box-shadow: 0 4px 8px rgb(19 37 71 / 10%);
+    .index-thead{
+      padding: 0 24px;
+    }
+    th {
+      text-align: right;
+      font-family: "IRANYekanMedium", serif;
+      font-size: 14px;
+      color: $darkgrey;
+
+      height: 40px;
+      font-style: normal;
+      font-weight: 500;
+    }
+    tbody {
+     td{
+       &:first-child{
+         padding-right: 24px;
+       }
+     }
+      tr {
+        padding: 0 19px;
+        height: 50px;
+        background: $whiteColor;
+        box-shadow: 0 4px 8px #1325471A;
+        border-radius: 5px;
+        border-bottom: 1px solid $divider;
+        &:last-child{
+          border-bottom:none !important;
+        }
+      }
+    }
+  }
+}
+
+
+

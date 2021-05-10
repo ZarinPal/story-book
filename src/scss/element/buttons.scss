@@ -1,0 +1,140 @@
+@import "../gloabal/variables";
+/**-------------------------------------------------------------------------------------------------------------------
+button-group
+-------------------------------------------------------------------------------------------------------------------- */
+.button-group {
+  ul {
+    box-sizing: border-box;
+    height: 32px;
+    display: inline-block;
+    padding: 3px 0;
+    cursor: pointer;
+    border: 1px solid $gray;
+    border-radius: 10px;
+
+    li {
+      display: inline-block;
+      font-family: 'IRANYekanMedium', serif;
+      list-style: none;
+      margin: auto 4px;
+      padding: 4px 12px;
+      font-size: 12px;
+      color: #8F9395;
+
+      &.active {
+        color: $whiteColor;
+        box-sizing: border-box;
+        text-align: center;
+        border-radius: 7px;
+        background-color: $primaryColor;
+      }
+    }
+  }
+}
+
+/**-------------------------------------------------------------------------------------------------------------------
+buttons
+-------------------------------------------------------------------------------------------------------------------- */
+%button {
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 17px;
+  text-decoration: none;
+  font-family: 'IRANYekanMedium', serif;
+  padding: 8px 14px;
+  font-size: 12px;
+  height: 33px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+@each $name, $bg-color, $text-color, $border, $box-shadow, $icon-color in $primary-button {
+  .btn-primary {
+    @extend %button;
+    background: $primaryColor;
+    color: $whiteColor;
+    border: 1px solid $gray;
+    box-shadow: 0 4px 8px rgba(19, 37, 71, 0.102);
+
+    &:hover {
+      background: #375B9F;
+      color: $whiteColor;
+      border: 1px solid $gray;
+      box-shadow: 0 4px 8px rgba(19, 37, 71, 0.102);
+    }
+
+
+    &.#{$name} {
+      @extend %button;
+      background: $bg-color;
+      color: $text-color;
+      border: $border;
+      box-shadow: $box-shadow;
+
+      &:after {
+        color: #66799D;
+      }
+    }
+
+  }
+}
+
+@each $name, $bg-color, $text-color, $border, $box-shadow, $icon-color in $navbar-button {
+  .btn-navbar {
+    @extend %button;
+    background-color: $buttonNavbar;
+    color: $whiteColor;
+    box-shadow: 0 4px 8px rgba(19, 37, 71, 0.102);
+
+    &:hover {
+      background: #375B9F;
+      color: $whiteColor;
+      box-shadow: 0 4px 8px rgba(19, 37, 71, 0.102);
+    }
+
+
+    &.#{$name} {
+      @extend %button;
+      background: $bg-color;
+      color: $text-color;
+      box-shadow: $box-shadow;
+
+      &:after {
+        color: #66799D;
+      }
+    }
+
+  }
+}
+
+@each $name, $bg-color, $text-color, $border, $box-shadow, $icon-color in $secondary-button {
+  .btn-secondary {
+    @extend %button;
+    background: $whiteColor;
+    color: $textColorSecondary;
+    box-shadow: 0 4px 8px rgba(19, 37, 71, 0.102);
+    border: 1px solid $gray;
+
+    &:hover {
+      background: #FCFCFC;
+      color: $textColorSecondary;
+      border: 1px solid $gray;
+      box-shadow: 0 4px 8px rgba(19, 37, 71, 0.102);
+    }
+
+    &.#{$name} {
+      @extend %button;
+      background: $bg-color;
+      color: $text-color;
+      border: $border;
+      box-shadow: $box-shadow;
+
+      &:after {
+        color: $gray;
+      }
+    }
+  }
+
+}
+

@@ -1,0 +1,175 @@
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
+@use "@material/textfield/helper-text";
+@use "@material/radio/styles";
+@use "@material/form-field";
+@use "@material/checkbox";
+
+@include checkbox.core-styles;
+@include form-field.core-styles;
+@include helper-text.helper-text-core-styles;
+@include textfield.core-styles;
+@import "../gloabal/variables";
+
+[dir=rtl] .mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__trailing, .mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__trailing[dir=rtl]{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid):not(.mdc-text-field--disabled) .mdc-notched-outline__leading{
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.mdc-text-field.mdc-text-field--disabled.mdc-text-field--disabled .mdc-notched-outline__leading{
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-notched-outline__leading{
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+.mdc-floating-label,.mdc-text-field__input {
+  font-family:'IRANYekanMedium', serif;
+  font-size: 13px;
+}
+.mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid):not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__leading, .mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid):not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__notch, .mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid):not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__trailing{
+  border-width: 2px;
+}
+.guid{
+  font-size: 13px !important;
+  font-family:'IRANYekanMedium', serif;
+  color: $label !important;
+}
+
+/**--------------------------------------------------------------------------------------------------------------------
+change style helper-text input form
+-------------------------------------------------------------------------------------------------------------------- */
+.mdc-text-field-helper-text:not(.mdc-text-field--disabled){
+  font-size: 13px !important;
+  font-family:'IRANYekanMedium', serif;
+  color: $label !important;
+  letter-spacing: 0 !important;
+}
+.mdc-text-field-helper-text::before{
+  margin-top: 8px;
+
+}
+/**--------------------------------------------------------------------------------------------------------------------
+change style label when focus  input form
+-------------------------------------------------------------------------------------------------------------------- */
+.mdc-floating-label--float-above:not(.mdc-text-field--disabled){
+  font-size: 13px !important;
+  padding-left: 8px;
+  color: $label !important;
+}
+
+
+/**--------------------------------------------------------------------------------------------------------------------
+change color-style input form
+-------------------------------------------------------------------------------------------------------------------- */
+
+
+.mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid){
+  @include textfield.density(0);
+  @include textfield.bottom-line-color(red);
+  @include textfield.ink-color($label);
+  @include textfield.label-color($label);
+  @include textfield.outline-color($borderGray);
+  @include textfield.focused-outline-color($primaryColor);
+  @include textfield.hover-outline-color($primaryColor);
+  @include textfield.hover-bottom-line-color($primaryColor);
+  @include textfield.outlined-height(42px);
+
+}
+
+/**--------------------------------------------------------------------------------------------------------------------
+change color-style disabled-input form
+-------------------------------------------------------------------------------------------------------------------- */
+.mdc-text-field.mdc-text-field--disabled{
+  @include textfield.disabled-fill-color($disabledBg);
+  @include textfield.disabled-ink-color(red);
+  @include textfield.disabled-label-color($gray);
+  @include textfield.disabled-outline-color($borderGray);
+  @include textfield.outlined-height(42px);
+}
+/**--------------------------------------------------------------------------------------------------------------------
+change color-style radio button form
+-------------------------------------------------------------------------------------------------------------------- */
+
+.mdc-radio__outer-circle{
+  border-color: $gray !important;
+}
+.mdc-radio__native-control:disabled + .mdc-radio__background .mdc-radio__inner-circle {
+  border-color: $gray !important;
+}
+
+.mdc-radio .mdc-radio__native-control:enabled:checked + .mdc-radio__background .mdc-radio__outer-circle{
+  border-color: $primaryColor !important;
+}
+.mdc-radio .mdc-radio__native-control:enabled + .mdc-radio__background .mdc-radio__inner-circle{
+  border-color: $primaryColor !important;
+}
+.mdc-radio .mdc-radio__background::before{
+  background-color: transparent !important;
+}
+.mdc-radio .mdc-radio__ripple::before, .mdc-radio .mdc-radio__ripple::after{
+  background-color: transparent !important;
+
+}
+
+
+/**--------------------------------------------------------------------------------------------------------------------
+  change color-style invalid-input form
+-------------------------------------------------------------------------------------------------------------------- */
+.mdc-text-field--invalid {
+  @include textfield.outline-color( $red);
+  @include textfield.ink-color( $label);
+  @include textfield.label-color($red);
+  @include textfield.hover-outline-color( $red);
+  @include helper-text.helper-text-validation-color( $red);
+  @include textfield.outlined-height(42px);
+}
+.mdc-text-field--invalid .mdc-floating-label{
+  color: $red !important;
+}
+
+.mdc-text-field-helper-text--validation-msg{
+  font-size: 13px ;
+  font-family: "IRANYekanMedium", serif;
+
+}
+
+
+/**--------------------------------------------------------------------------------------------------------------------
+change style text-area input form
+-------------------------------------------------------------------------------------------------------------------- */
+
+.mdc-text-field--textarea {
+
+  @include textfield.textarea-min-rows($rows);
+
+
+}
+.textarea,.textarea-disable,.textarea-invalid{
+  height: unset !important;
+}
+
+
+.mdc-checkbox{
+  @include checkbox.focus-indicator-color(#000);
+  @include checkbox.ink-color($whiteColor);
+  @include checkbox.disabled-ink-color($lightGray);
+  @include checkbox.container-colors($lightGray,$whiteColor , $primaryColor, $primaryColor);
+  @include checkbox.disabled-container-colors($lightGray, $whiteColor, $lightGray, $whiteColor);
+}
+
+.mdc-checkbox__background {
+  border-width: 1px ;
+  border-radius: 4px ;
+}
+
+.mdc-checkbox .mdc-checkbox__ripple::before, .mdc-checkbox .mdc-checkbox__ripple::after{
+  background-color: transparent !important;
+}

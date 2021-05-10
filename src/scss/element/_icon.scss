@@ -1,0 +1,161 @@
+$icons: (
+
+'chevron-right-Pagination': "\e95e",
+'chevron-left-Pagination': "\e957",
+'Circle-arrow-badge': "\e958",
+'Difference-badge': "\e959",
+'in-pay-badge': "\e95a",
+'multiplied-by-badge': "\e95b",
+'sent-to-shapparak-badge': "\e95c",
+'Tick-badge': "\e95d",
+'info-line': "\e956",
+'phonelink': "\e955",
+'account_tree': "\e952",
+'logout': "\e953",
+'setting-line': "\e954",
+'all-dashboard': "\e951",
+'export': "\e94e",
+'arrow-down-sort': "\e94f",
+'arrow-up-sort': "\e950",
+'filter': "\e94b",
+'html': "\e94c",
+'pdf': "\e94d",
+'coupon_border': "\e949",
+'money-24px': "\e94a",
+'receipt': "\e948",
+'check-nopadding': "\e943",
+'tasviye-shaparak-nopadding': "\e947",
+'outline-receipt-noborder': "\e945",
+'product': "\e946",
+'tour-guide': "\e944",
+'handle': "\e942",
+'cancel': "\e941",
+'add-round': "\e940",
+'list': "\e93d",
+'notification-outline': "\e93e",
+'store': "\e93f",
+'back': "\e93b",
+'back-long': "\e93c",
+'arrow-drop-down': "\e93a",
+'round-link-24px': "\e939",
+'warning': "\e938",
+'info': "\e935",
+'error': "\e936",
+'terminal': "\e937",
+'upload': "\e934",
+'current': "\e932",
+'done': "\e933",
+'double-arrow': "\e931",
+'pending': "\e92f",
+'check': "\e930",
+'up': "\e92b",
+'down': "\e92c",
+'sync': "\e92d",
+'shetabi': "\e92e",
+'cards2': "\e925",
+'coupon': "\e926",
+'zarinlink': "\e927",
+'power': "\e928",
+'session': "\e929",
+'setting': "\e92a",
+'today': "\e91f",
+'track': "\e920",
+'outline-receipt': "\e921",
+'email': "\e922",
+'arrow-down': "\e923",
+'print': "\e924",
+'add': "\e913",
+'close': "\e91a",
+'excel': "\e91b",
+'attach': "\e91c",
+'mail': "\e91d",
+'mail-open': "\e91e",
+'copy': "\e915",
+'delete': "\e916",
+'edit': "\e917",
+'code': "\e918",
+'view': "\e919",
+'card': "\e90f",
+'doc': "\e910",
+'invite': "\e911",
+'link': "\e912",
+'telegram': "\e914",
+'arrow-right': "\e900",
+'cards': "\e901",
+'logo': "\e902",
+'mobile': "\e903",
+'document': "\e904",
+'qr': "\e905",
+'home': "\e906",
+'money': "\e907",
+'knowledge': "\e908",
+'drop-down': "\e909",
+'menu': "\e90a",
+'notification': "\e90b",
+'search': "\e90c",
+'help': "\e90d",
+'user-outline': "\e90e",
+
+
+);
+
+// generate the color palette!
+@for $i from 1 through length($icons) {
+  $name: nth(map-keys($icons), $i);
+  $icon: map-get($icons, $name);
+  .icon-#{$name} {
+    &:before {
+      content: $icon;
+      font-family: 'fontIcon';
+      vertical-align: middle;
+      margin-left: 5px;
+    }
+  }
+  .icon-after-#{$name}{
+    &:after {
+      content: $icon;
+      font-family: 'fontIcon';
+      vertical-align: middle;
+    }
+  }
+}
+.sidebar{
+  // generate the color palette!
+  @for $i from 1 through length($icons) {
+    $name: nth(map-keys($icons), $i);
+    $icon: map-get($icons, $name);
+    .icon-#{$name} {
+      &:before {
+       font-size: 17px;
+      }
+    }
+     .icon-after-#{$name} {
+       &:after {
+         margin-left: 7px;
+         font-size: 17px;
+       }
+    }
+  }
+}
+
+
+
+
+i[class^="icon-"], i[class*=" icon-"],
+span[class^="icon-"], span[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'fontIcon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+

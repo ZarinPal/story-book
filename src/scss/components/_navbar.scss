@@ -1,0 +1,61 @@
+
+$whiteColor: #fff;
+$bgIcon: #40508C;
+.navbar{
+  background: linear-gradient(90deg, #162354 -1.4%, #273A7F 100%);
+  height: 245px;
+  padding: 25px  80px;
+  .avatar{
+    display: inline-block;
+    margin-right: 17px;
+    vertical-align: middle;
+    img{
+      width: 32px;
+      height: 32px;
+      vertical-align: middle;
+      border-radius: 10px;
+    }
+
+  }
+  .pull-right{
+    float: right;
+    .heading {
+      font-family: 'IRANYekanMedium', serif;
+      font-style: normal;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 25px;
+      text-align: right;
+      color: $whiteColor;
+    }
+    .icon-drop-down{
+      cursor: pointer;
+      &:before{
+        margin-right: 6px;
+        color: #fff;
+        font-size: 11px;
+      }
+    }
+  }
+
+  .icon-store{
+    display: inline-block;
+    margin-left: 15px;
+    &:before{
+      font-size: 18px;
+      color: $whiteColor;
+      padding: 9px;
+      background: $bgIcon;
+      border-radius: 10px;
+    }
+
+  }
+  .pull-left{
+    float: left;
+  .button-component{
+    display: inline-block;
+    margin-right: 17px;
+  }
+  }
+}

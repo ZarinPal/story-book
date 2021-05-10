@@ -1,0 +1,91 @@
+/**--------------------------------------------------------------------------------------------------------------------
+global-color-variable
+-------------------------------------------------------------------------------------------------------------------- */
+$buttonNavbar: #303D6B;
+$verified: #02B894;
+$mainColor: #2D3436;
+$theadBg: #f8f9fa;
+$divider: #e0e4e7;
+$primaryColor: #28457B;
+$springGreen: #02B894;
+$red: #D63031;
+$coral: #EF6C00;
+$yellow: #FFE94E;
+$borderGray: #D5D7E1;
+$dodgerBlue: #0091FF;
+$whiteColor: #fff;
+$lightPink: #FEF8F8;
+$peachPuff: #FEF9F5;
+$mintcream: #F7FCFB;
+$gray: #E6E6EA;
+$lightGray: #EFF2F7;
+$lightslategray: #606367;
+$darkgrey: #636E72;
+$dimGray: #2E3436;
+$black: #000;
+$black: #000;
+$textColorSecondary: #2E3436;
+$disabledBg: #FBFBFB;
+$label: #80868A;
+$hoverSidebarItem: #F9FAFC;
+$silverLevelBg: #D3D3D3;
+$basicLevelBg: #EDEEF0;
+$confilictedBg: #FFFAEB;
+$confilictedText:#F2C94C;
+$reversedBg: #F4FAFF;
+$deactiveBg: #F9F9F9;
+/**--------------------------------------------------------------------------------------------------------------------
+global-variable
+-------------------------------------------------------------------------------------------------------------------- */
+$radius: 10px !default;
+$whiteShadow: 0 4px 8px rgba(19, 37, 71, 0.102);
+$rows: 5;
+/**--------------------------------------------------------------------------------------------------------------------
+btn-primary-disable
+-------------------------------------------------------------------------------------------------------------------- */
+$text-primary-disable: #66799D;
+$primary-disable: #95A3BC;
+$icon-primary-disable-color: #66799D;
+
+/**--------------------------------------------------------------------------------------------------------------------
+btn-secondary-disable
+-------------------------------------------------------------------------------------------------------------------- */
+$textColorSecondary: #2E3436;
+$border-secondary: 1px solid $gray;
+$secondary-shadow: 0 4px 8px rgba(19, 37, 71, 0.102);
+
+/**--------------------------------------------------------------------------------------------------------------------
+arrays of style button
+-------------------------------------------------------------------------------------------------------------------- */
+$primary-button: (
+  //name bg-color text-color border box-shadow $icon-color
+    'disable' $primary-disable $text-primary-disable $icon-primary-disable-color,
+);
+$navbar-button: (
+  //name bg-color text-color border box-shadow $icon-color
+    'disable' $primary-disable $text-primary-disable $icon-primary-disable-color,
+);
+$secondary-button: (
+    'disable' $whiteColor $gray $border-secondary $secondary-shadow $gray,
+);
+
+
+/**---------------------------------------------------------------------------------------------------------------------
+      arrays of style label
+-------------------------------------------------------------------------------------------------------------------- */
+
+
+//arrays of colors
+$status-colors: (
+  //name bg-color text-color
+    'success' $mintcream $springGreen,
+    'pending' $peachPuff $coral,
+    'danger' $lightPink $red,
+    'confilicted' $confilictedBg $confilictedText,
+    'reversed' $reversedBg $dodgerBlue,
+    'deactive' $deactiveBg $label,
+);
+
+
+
+
