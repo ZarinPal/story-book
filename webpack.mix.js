@@ -3,8 +3,8 @@ let webpack = require('webpack');
 
 mix.setPublicPath('dist').
   js('src/js/app.js', 'dist/js').
-  sass('src/scss/app.scss', 'dist/css').
-  copy('src/index.html', 'dist/index.html').
+  sass('src/scss/storybook/app.scss', 'dist/css').
+  copy('src/index.html', 'dist/index.html')
   browserSync({
       port: '8003',
       proxy: false,

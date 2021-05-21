@@ -17,6 +17,7 @@ blue.args = {
   blue: true,
   title: 'نمونه متن برای عنوان ',
   buttonAction: 'ذخیره ',
+  headingModal: 'نمایش مودال ',
   buttonSecondaryAction: 'پاک کردن ',
 
 };
@@ -24,6 +25,7 @@ export const remove = Template.bind({});
 remove.args = {
   remove: true,
   title: 'حذف زرین‌لینک ',
+  headingModal: 'نمایش مودال حذف ',
   buttonAction: 'حذف ',
   buttonSecondaryAction: 'انصراف ',
   content: 'ازحذف این آیتم مطمینید؟  ',
@@ -34,6 +36,7 @@ green.args = {
   green: true,
   title: 'نمونه متن برای عنوان ',
   buttonAction: 'ذخیره ',
+  headingModal: 'نمایش مودال ',
   buttonSecondaryAction: 'پاک کردن ',
 
 };

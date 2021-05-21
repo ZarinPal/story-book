@@ -7,12 +7,8 @@
     <td> {{ dataKey.rrn }}</td>
     <td class="">{{ dataKey.craeteAt }}</td>
     <td >
-<!--      <status :label="dataKey.status "   :class="dataKey.class"></status>-->
+      <status :label="dataKey.status "   :class="dataKey.class" ></status>
 
-      <a  class="label" :class=dataKey.class >
-        <i class="icon-badge" :class="dataKey.icon"></i>
-        <span > {{ dataKey.status }}</span>
-      </a>
      </td>
   </tr>
 </template>
@@ -29,6 +25,7 @@ export default {
       type: Object,
     },
   },
+
   components: {
     status
   }

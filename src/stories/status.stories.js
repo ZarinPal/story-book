@@ -108,4 +108,12 @@ INPROGRESS.args = {
   INPROGRESS: true,
   label: 'در حالِ بررسی',
 };
+export const singlePaid = Template.bind({});
+singlePaid.args = {
+  singlePaid: true,
+};
+export const singleChecked = Template.bind({});
+singleChecked.args = {
+  singleChecked: true,
+};
 

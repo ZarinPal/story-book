@@ -14,6 +14,11 @@ table {
     font-size: 13px;
     color: $mainColor;
   }
+  a {
+    font-family: 'IRANYekanRegular', serif;
+    font-size: 13px;
+    color: $mainColor;
+  }
   thead {
     background-color: $theadBg;
   }
@@ -33,24 +38,7 @@ table {
   }
 }
 @media(max-width: 767px) {
-  td:nth-of-type(2):before {
-    content: "شناسه‌ی پرداخت	";
-  }
-  td:nth-of-type(3):before {
-    content: "مبلغ (به ریال)	";
-  }
-  td:nth-of-type(4):before {
-    content: "توضیحات";
-  }
-  td:nth-of-type(5):before {
-    content: "شناسه‌ی ارجاع";
-  }
-  td:nth-of-type(6):before {
-    content: "تاریخ و ساعت";
-  }
-  td:nth-of-type(7):before {
-    content: "وضعیت";
-  }
+
   /* Force table to not be like tables anymore */
   table, thead, tbody, th, td, tr {
     display: block;
@@ -103,24 +91,7 @@ table {
 
 }
 @media(min-width: 768px) and (max-width: 991px) {
-  td:nth-of-type(2):before {
-    content: "شناسه‌ی پرداخت	";
-  }
-  td:nth-of-type(3):before {
-    content: "مبلغ (به ریال)	";
-  }
-  td:nth-of-type(4):before {
-    content: "توضیحات";
-  }
-  td:nth-of-type(5):before {
-    content: "شناسه‌ی ارجاع";
-  }
-  td:nth-of-type(6):before {
-    content: "تاریخ و ساعت";
-  }
-  td:nth-of-type(7):before {
-    content: "وضعیت";
-  }
+
   /* Force table to not be like tables anymore */
   table, thead, tbody, th, td, tr {
     display: block;

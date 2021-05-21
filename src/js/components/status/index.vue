@@ -1,10 +1,9 @@
 <template dir="rtl">
 
-    <a :class="classes" @click="onClick">
+    <div :class="classes" @click="onClick">
+      <i :class="icons" ></i>
       <span >{{ label }}</span>
-      <i :class="icons"></i>
-
-    </a>
+    </div>
 
 
 
@@ -14,7 +13,6 @@
 import Vue from 'vue'
 import Component from 'vue-class-component'
 import {Prop} from 'vue-property-decorator'
-
 @Component
 export default class status extends Vue {
   @Prop({type: String, required: true}) readonly label: string
@@ -24,6 +22,7 @@ export default class status extends Vue {
   @Prop({type: Boolean, default: false}) readonly VERIFIED: Boolean
   @Prop({type: Boolean, default: false}) readonly REJECTED: Boolean
   @Prop({type: Boolean, default: false}) readonly FAILED: Boolean
+
   @Prop({type: Boolean, default: false}) readonly EXPIRED: Boolean
   @Prop({type: Boolean, default: false}) readonly INBANK: Boolean
   @Prop({type: Boolean, default: false}) readonly CONFLICTED: Boolean
@@ -37,15 +36,20 @@ export default class status extends Vue {
   @Prop({type: Boolean, default: false}) readonly CLOSED: Boolean
   @Prop({type: Boolean, default: false}) readonly SUPPORTRESPONSE: Boolean
   @Prop({type: Boolean, default: false}) readonly INPROGRESS: Boolean
+  @Prop({type: Boolean, default: false}) readonly singlePaid: Boolean
+  @Prop({type: Boolean, default: false}) readonly singleChecked: Boolean
 
   get classes() {
     return {
       'label': true,
+      'single-icon': !this.label,
+      'check-bg': this.singleChecked,
+      'paid-bg': this.singlePaid,
       'danger': this.danger||this.REJECTED||this.FAILED||this.EXPIRED,
-      'success': this.success||this.VERIFIED||this.PAID||this.ACTIVEProduct,
+      'success': this.success||this.VERIFIED||this.PAID||this.ACTIVEProduct||this.ACTIVE,
       'pending': this.Warning||this.INBANK||this.PENDING||this.INPROGRESS,
       'confilicted': this.CONFLICTED||this.InPROGRESS,
-      'reversed': this.REVERSED||this.ACTIVE||this.SUPPORTRESPONSE,
+      'reversed': this.REVERSED||this.SUPPORTRESPONSE,
       'deactive': this.deACTIVE||this.CLOSED,
 
     };
@@ -54,9 +58,10 @@ export default class status extends Vue {
     return {
       'icon-badge':true,
       'icon-Difference-badge': this.CONFLICTED||this.InPROGRESS||this.REVERSED,
-      'icon-Circle-arrow-badge': this.PENDING||this.ACTIVE,
+      'icon-outline-receipt-noborder': this.singlePaid,
+      'icon-Circle-arrow-badge': this.PENDING,
       'icon-in-pay-badge': this.INBANK,
-      'icon-Tick-badge': this.VERIFIED||this.PAID||this.ACTIVEProduct,
+      'icon-Tick-badge': this.VERIFIED||this.PAID||this.ACTIVEProduct||this.ACTIVE||this.singleChecked,
       'icon-multiplied-by-badge': this.REJECTED||this.FAILED||this.EXPIRED||this.deACTIVE,
     };
   }

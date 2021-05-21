@@ -1,9 +1,8 @@
 <template>
-  <div class=" card-bank">
+  <div class="card-bank">
     <div :class="classes">
       <div class="right-align">
         <span class="bank-name">{{ bankName }}</span>
-
         <span :class="logos"></span>
       </div>
       <div class="center-align">
@@ -19,14 +18,12 @@
       </div>
     </div>
   </div>
-
 </template>
 <!--Typescript code-->
 <script lang="ts">
 import Vue from 'vue'
 import Component from 'vue-class-component'
 import {Prop} from 'vue-property-decorator'
-
 @Component
 export default class cardBank extends Vue {
   @Prop({type: String, required: true}) readonly bankName: string

@@ -47,6 +47,7 @@ buttons
   height: 33px;
   box-sizing: border-box;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 @each $name, $bg-color, $text-color, $border, $box-shadow, $icon-color in $primary-button {

@@ -34,6 +34,7 @@ $confilictedBg: #FFFAEB;
 $confilictedText:#F2C94C;
 $reversedBg: #F4FAFF;
 $deactiveBg: #F9F9F9;
+$checkBg: #F7F8FC;
 /**--------------------------------------------------------------------------------------------------------------------
 global-variable
 -------------------------------------------------------------------------------------------------------------------- */
@@ -79,6 +80,8 @@ $secondary-button: (
 $status-colors: (
   //name bg-color text-color
     'success' $mintcream $springGreen,
+    'check-bg' $mintcream $primaryColor,
+    'paid-bg' $mintcream $springGreen,
     'pending' $peachPuff $coral,
     'danger' $lightPink $red,
     'confilicted' $confilictedBg $confilictedText,

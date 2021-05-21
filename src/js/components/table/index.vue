@@ -1,14 +1,15 @@
+
 <template>
   <div> <table class="table">
     <thead @click="onClick">
     <tr>
       <th scope="col" class="index-thead">ردیف</th>
-      <th scope="col">شناسه‌ی پرداخت</th>
-      <th scope="col">مبلغ (به ریال)</th>
-      <th scope="col">توضیحات</th>
-      <th scope="col">شناسه‌ی ارجاع</th>
-      <th scope="col">تاریخ و ساعت</th>
-      <th scope="col">وضعیت</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
     </tr>
     </thead>
     <tbody>

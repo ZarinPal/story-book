@@ -15,6 +15,7 @@ import {Prop} from 'vue-property-decorator'
 @Component
 export default class myButtonIcon extends Vue {
   @Prop({type: String, required: true}) readonly label: string
+  @Prop({type: String}) readonly iconsName: string
   @Prop({type: Boolean, default: false}) readonly primary: Boolean
   @Prop({type: Boolean, default: false}) readonly primaryOpacity: Boolean
   @Prop({type: Boolean, default: false}) readonly disable: Boolean
@@ -22,7 +23,8 @@ export default class myButtonIcon extends Vue {
 
   get iconClass() {
     return {
-      'icon-notification-outline': true,
+
+      [`icon-${this.iconsName}`]: true,
       'btn': true,
       'disable': this.disable,
       'btn-primary': this.primary,
@@ -32,10 +34,9 @@ export default class myButtonIcon extends Vue {
   }
 
   public onClick(): void {
-    console.log('aza');
-    console.log(this.primary)
     this.$emit('onClick');
   }
+
 }
 </script>
 

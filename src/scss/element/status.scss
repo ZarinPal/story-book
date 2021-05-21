@@ -11,6 +11,19 @@ label
   flex: none;
   order: 0;
   flex-grow: 0;
+  width: max-content;
+  &.single-icon,.check-bg{
+    padding: 4px ;
+    border-radius: 8px ;
+  }
+  &.paid-bg{
+    padding: 3px 5px !important;
+    border-radius: 8px !important;
+    i{
+      font-size: 15px;
+    }
+  }
+
   .icon-badge{
     &:before{
       font-weight: bold;
