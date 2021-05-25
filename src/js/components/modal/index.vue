@@ -23,21 +23,21 @@
         </div>
       </div>
     </transition>
-    <my-button id="show-modal" :label="headingModal" class="button-component"  :iconsName="icons"  @click="onClick"></my-button>
+    <my-button id="show-modal" :label="headingModal" class="button-component" @onClick="submit"></my-button>
+
   </div>
 
 </template>
 <!--Typescript code-->
 <script lang="ts">
-import MyButton from '../buttonIcons';
-
 import Vue from 'vue'
+import MyButton from '../buttonIcons/index';
 import Component from 'vue-class-component'
 import {Prop} from 'vue-property-decorator'
 
 @Component({
   components: {
-    MyButton
+    MyButton,
   }
 
 })
@@ -71,9 +71,10 @@ export default class Modal extends Vue {
     this.showModal = false;
   }
 
-  public onClick(): void {
+  public submit(): void {
     this.showModal = true;
-    this.$emit('onClick');
+    console.log('submit')
+    this.$emit('submit');
   }
 
 }

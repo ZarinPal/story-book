@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>
-      <a :class="classes" @click="onClick">{{ label }}</a>
+      <a :class="classes" @click="modalAction" >{{ label }}</a>
     </p>
   </div>
 </template>
@@ -24,18 +24,22 @@ export default class myButton extends Vue {
       'btn-secondary': !this.primary,
     };
   }
-    get iconClass(){
-      return {
-        'icon-after-notification-outline': true,
-        'btn': true,
-        'disable': this.disable,
-        'btn-primary': this.primary,
-        'btn-secondary': !this.primary,
-      };
-    }
+  get iconClass(){
+    return {
+      'icon-after-notification-outline': true,
+      'btn': true,
+      'disable': this.disable,
+      'btn-primary': this.primary,
+      'btn-secondary': !this.primary,
+    };
+  }
   public onClick(): void {
-    console.log('aza');
-    this.$emit('onClick');
+    console.log('azaD');
+  }
+  public modalAction(): void {
+    console.log('modalAction');
+    this.$emit('eventSubmit');
+
   }
 }
 </script>

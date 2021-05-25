@@ -18,9 +18,10 @@
       </div>
       <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 " >
         <div class="pull-left">
-          <Modal title="kjhgfdfghjkl"  icons="export" headingModal="اعلانات"  @onClick="test">
+          <Modal title="kjhgfdfghjkl"  icons="export" headingModal="اعلانات" >
             <p slot="body">
-              <my-button label="gvf" :primary="true"  class="button-component"   @onClick="test2" ></my-button>
+              <my-button label="مم" class="button-component" @onClick="test"></my-button>
+
             </p>
           </Modal>
         </div>
@@ -30,12 +31,13 @@
 </template>
 <!--Typescript code-->
 <script lang="ts">
-import Modal from '../modal';
-import MyButtonNavbar from '../buttonNavbar';
-import MyButton from '../buttonIcons';
+import Modal from '../modal/index';
+import MyButtonNavbar from '../buttonNavbar/index';
 import Vue from 'vue'
 import Component from 'vue-class-component'
 import {  Prop } from 'vue-property-decorator'
+import MyButton from '../buttonIcons/index';
+
 @Component({
   components: {
     MyButtonNavbar,
@@ -52,7 +54,8 @@ export default class navbar extends Vue {
   }
   public test(): void {
     console.log('test');
-  } public test2(): void {
+  }
+  public test2(): void {
     console.log('testtestjhgfrghjkl');
   }
 }

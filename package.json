@@ -1,6 +1,6 @@
 {
   "name": "zarinpal-story-book",
-  "version": "1.3.3",
+  "version": "1.3.9",
   "description": "A component story-book in zarinpal compony",
   "main": "index.js",
   "scripts": {
