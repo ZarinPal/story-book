@@ -13,7 +13,7 @@ label
   flex-grow: 0;
   width: max-content;
   &.single-icon,.check-bg{
-    padding: 4px ;
+    padding: 6px 8px;
     border-radius: 8px ;
   }
   &.paid-bg{
@@ -30,16 +30,7 @@ label
       margin-left: 0;
     }
   }
-  .icon-multiplied-by-badge{
-    &:before{
-      font-size: 12px;
-    }
-  }
-  .icon-multiplied-by-badge{
-    &:before{
-      font-size: 19px;
-    }
-  }
+
   .icon-Circle-arrow-badge{
     &:before{
       font-size: 19px;

@@ -1,4 +1,5 @@
 import '../src/scss/storybook/app.scss'
+import '../src/js/app.js'
 
 
 

@@ -7,8 +7,10 @@
     <td> {{ dataKey.rrn }}</td>
     <td class="">{{ dataKey.craeteAt }}</td>
     <td >
-      <status :label="dataKey.status "   :class="dataKey.class" ></status>
-
+      <div class="label" :class="dataKey.class">
+        <i :class="dataKey.icon" ></i>
+        <span >{{ dataKey.status }}</span>
+      </div>
      </td>
   </tr>
 </template>

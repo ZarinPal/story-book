@@ -79,19 +79,10 @@
 
 
 .modal-body {
-  margin: 20px 0;
+  margin: 20px 0 -5px 0;
   label{
     width: 100%;
     margin: 11px auto;
-  }
-  .contains{
-    p{
-      font-family: 'IRANYekanMedium',sans-serif;
-      font-size: 13px;
-      line-height: 18px;
-      text-align: right;
-      color: $mainColor;
-    }
   }
 }
 
@@ -128,4 +119,8 @@
 
 
 
-
+@media(max-width: 575px) {
+  .modal-container {
+    width: 82%;
+  }
+}

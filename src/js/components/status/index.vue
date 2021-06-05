@@ -15,14 +15,13 @@ import Component from 'vue-class-component'
 import {Prop} from 'vue-property-decorator'
 @Component
 export default class status extends Vue {
-  @Prop({type: String, required: true}) readonly label: string
+  @Prop({type: String}) readonly label: string
   @Prop({type: Boolean, default: false}) readonly Warning: Boolean
   @Prop({type: Boolean, default: false}) readonly success: Boolean
   @Prop({type: Boolean, default: false}) readonly danger: Boolean
   @Prop({type: Boolean, default: false}) readonly VERIFIED: Boolean
   @Prop({type: Boolean, default: false}) readonly REJECTED: Boolean
   @Prop({type: Boolean, default: false}) readonly FAILED: Boolean
-
   @Prop({type: Boolean, default: false}) readonly EXPIRED: Boolean
   @Prop({type: Boolean, default: false}) readonly INBANK: Boolean
   @Prop({type: Boolean, default: false}) readonly CONFLICTED: Boolean
@@ -38,6 +37,9 @@ export default class status extends Vue {
   @Prop({type: Boolean, default: false}) readonly INPROGRESS: Boolean
   @Prop({type: Boolean, default: false}) readonly singlePaid: Boolean
   @Prop({type: Boolean, default: false}) readonly singleChecked: Boolean
+  @Prop({type: Boolean, default: false}) readonly CODE: Boolean
+  @Prop({type: Boolean, default: false}) readonly EDIT: Boolean
+  @Prop({type: Boolean, default: false}) readonly close: Boolean
 
   get classes() {
     return {
@@ -50,19 +52,21 @@ export default class status extends Vue {
       'pending': this.Warning||this.INBANK||this.PENDING||this.INPROGRESS,
       'confilicted': this.CONFLICTED||this.InPROGRESS,
       'reversed': this.REVERSED||this.SUPPORTRESPONSE,
-      'deactive': this.deACTIVE||this.CLOSED,
+      'deactive': this.deACTIVE||this.CLOSED||this.CODE||this.EDIT||this.close,
 
     };
   }
   get icons() {
     return {
       'icon-badge':true,
+      'icon-code':this.CODE,
+      'icon-edit':this.EDIT,
       'icon-Difference-badge': this.CONFLICTED||this.InPROGRESS||this.REVERSED,
       'icon-outline-receipt-noborder': this.singlePaid,
       'icon-Circle-arrow-badge': this.PENDING,
       'icon-in-pay-badge': this.INBANK,
       'icon-Tick-badge': this.VERIFIED||this.PAID||this.ACTIVEProduct||this.ACTIVE||this.singleChecked,
-      'icon-multiplied-by-badge': this.REJECTED||this.FAILED||this.EXPIRED||this.deACTIVE,
+      'icon-multiplied-by-badge': this.REJECTED||this.FAILED||this.EXPIRED||this.deACTIVE||this.close,
     };
   }
 

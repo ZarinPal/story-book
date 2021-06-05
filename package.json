@@ -1,6 +1,6 @@
 {
   "name": "zarinpal-story-book",
-  "version": "1.3.9",
+  "version": "1.4.1",
   "description": "A component story-book in zarinpal compony",
   "main": "index.js",
   "scripts": {
@@ -33,7 +33,8 @@
     "vue-loader": "^15.9.6",
     "vue-property-decorator": "^9.1.2",
     "vue-router": "^3.5.1",
-    "vue-template-compiler": "^2.6.12"
+    "vue-template-compiler": "^2.6.12",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

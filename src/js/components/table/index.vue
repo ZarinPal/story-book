@@ -36,6 +36,7 @@ export default {
   data(){
     return{
       dataSample: [
+        {index:"1",name:"مهدی محمدی",class:"deactive",icon:"icon-code",id:"25667",amount: "47,000", craeteAt: "۱۳۹۹/۱۲/۱۱-۱۲:۲۰:۵۸", description: "بابت تسویه ماه فروردین 1400",status:" ", rrn: "564677"},
         {index:"1",name:"مهدی محمدی",class:"success",icon:"icon-Tick-badge",id:"25667",amount: "47,000", craeteAt: "۱۳۹۹/۱۲/۱۱-۱۲:۲۰:۵۸", description: "بابت تسویه ماه فروردین 1400",status:"پرداخت موفق", rrn: "564677"},
         {index:"2",name:"رامین ضیایی",class:"pending",icon:"icon-in-pay-badge",id:"256300",amount: "10,765,654", craeteAt: "۱۳۹۹/۱۲/۱۱-۱۲:۲۰:۵۸", description: "بابت تسویه ماه اسفند ماه 1399",status:"در حال پرداخت", rrn: "--"},
         {index:"3",name:"علی امیری",class:"danger",icon:"icon-multiplied-by-badge",id:"6543",amount: "678,450", craeteAt: "۱۳۹۹/۱۲/۱۱-۱۲:۲۰:۵۸", description: "تست درگاه توسط پشتیبان",status:"ردشده", rrn: "537257"},

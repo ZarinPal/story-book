@@ -116,4 +116,16 @@ export const singleChecked = Template.bind({});
 singleChecked.args = {
   singleChecked: true,
 };
+export const CODE = Template.bind({});
+CODE.args = {
+  CODE: true,
+};
+export const EDIT = Template.bind({});
+EDIT.args = {
+  EDIT: true,
+};
+export const close = Template.bind({});
+close.args = {
+  close: true,
+};
 
