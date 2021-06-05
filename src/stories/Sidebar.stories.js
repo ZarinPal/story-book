@@ -21,6 +21,7 @@ export const goldLevel = Template.bind({});
 goldLevel.args = {
   goldLevel: true,
   levelName: 'طلایی',
+  zpNumber: '4567',
   username: 'سیده آزاده میرنظامی',
 };
 export const goldVip = Template.bind({});

@@ -21,16 +21,18 @@
           <Modal title="kjhgfdfghjkl"  icons="export" headingModal="اعلانات" >
             <p slot="body">
               <my-button label="مم" class="button-component" @onClick="test"></my-button>
-
             </p>
           </Modal>
         </div>
       </div>
-  </div>
+<!--      <sidebar  :zpNumber="345" :goldVip="true" levelName="طلایی" ></sidebar>-->
+
+    </div>
 
 </template>
 <!--Typescript code-->
 <script lang="ts">
+import sidebar from '../sidebar/index';
 import Modal from '../modal/index';
 import MyButtonNavbar from '../buttonNavbar/index';
 import Vue from 'vue'
@@ -42,6 +44,7 @@ import MyButton from '../buttonIcons/index';
   components: {
     MyButtonNavbar,
     MyButton,
+    sidebar,
     Modal
   }
 })

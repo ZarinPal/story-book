@@ -7,23 +7,26 @@
             <span class="icon-menu close-toggle" @click="closeNav()" id="closeToggle"></span>
           </div>
         <div class="user-info">
-          <img class="avatar" src="../../../images/avatar.jpeg">
+          <img class="avatar" :src="src">
           <div class="level-info" :class="classes">
             <span class="level-type" >{{levelName}}</span>
             <span class="zp-id">
               <span class="zp">ZP.</span>
-              <span>356089</span>
+              <span>{{ zpNumber }}</span>
             </span>
 
           </div>
           <p class="username" >{{ username }}</p>
         </div>
         <div class="list-group">
-          <a v-for="(tab,key) in sidebarTabs" :key="key"  :to="tab.link" :href="tab.link" class="list-group-item" :class="tab.class"  >
-            <i :class="tab.icon"></i>
-            <span class="title-transKey"> {{tab.titleTransKey}}</span>
+          <router-link tag="li" v-for="(tab,key) in sidebarTabs" :key="key"   :to="{ name: tab.link.name}"  class="list-group-item" :class="tab.class"  v-if="!tab.divider" >
+            <a :href="tab.link.name">
+              <i :class="tab.icon"></i>
+              <span class="title-transKey"> {{tab.titleTransKey}}</span>
+            </a>
 
-          </a>
+          </router-link>
+          <a v-else><li class="divider" ></li></a>
         </div>
       </div>
   </div>
@@ -36,8 +39,11 @@ import Component from 'vue-class-component'
 import {  Prop } from 'vue-property-decorator'
 @Component
 export default class sidebar extends Vue {
-  @Prop({type: String, required: true}) readonly username: string
-  @Prop({type: String, required: true}) readonly levelName: string
+  @Prop({type: String}) readonly username: string
+  @Prop({type: String}) readonly src: string
+  @Prop({type: String}) readonly levelName: string
+  @Prop() readonly zpNumber: number
+
   @Prop({type: Boolean, default: false}) readonly goldVip: Boolean
   @Prop({type: Boolean, default: false}) readonly silverVip: Boolean
   @Prop({type: Boolean, default: false}) readonly basicLevel: Boolean
@@ -46,44 +52,50 @@ export default class sidebar extends Vue {
   @Prop({type: Boolean,  default: false}) readonly goldLevel: Boolean
   private sidebarTabs: Array<object> = [
     {
-      link: 'dashboard.index',
+      link: {name: 'dashboard.index'},
       icon: 'icon-all-dashboard',
       titleTransKey: 'نمای کلی',
 
     },
     {
-      link:'home.index',
+      link: {name: 'home.index'},
       icon: 'icon-home',
       titleTransKey: 'پیشخوان',
-      class:'active',
+      class:'terminal-item',
+
 
     },
     {
-      link:'session.index',
+      link: {name: 'session.index'},
       icon: 'icon-money',
       titleTransKey: 'تراکنش‌ها',
       group:'terminal',
+      class:'terminal-item',
 
     },
     {
-      link:  'reconciliation.index',
+      link: {name: 'reconciliation.index'},
+
       icon: 'icon-outline-receipt',
       titleTransKey: 'تسویه‌حساب',
       group:'terminal',
+      class:'terminal-item',
 
     },
     {
-      link:  'payout.index',
+      link: {name: 'payout.index'},
       icon: 'icon-track',
       titleTransKey: 'تسهیم درآمد',
       group:'terminal',
+      class:'terminal-item',
 
     },
     {
-      link:  'product.index',
+      link: {name: 'product.index'},
       icon: 'icon-product',
       titleTransKey: 'محصولات',
       group:'terminal',
+      class:'terminal-item',
 
     },
     {
@@ -91,13 +103,13 @@ export default class sidebar extends Vue {
 
     },
     {
-      link:  'bankAccount.index',
+      link: {name: 'bankAccount.index'},
       icon: 'icon-cards',
       titleTransKey: 'حساب‌های بانکی',
       group:'normal',
     },
     {
-      link:  'ticket.index',
+      link: {name: 'ticket.index'},
       icon: 'icon-help',
       titleTransKey: 'تیکت‌ها',
       group:'normal',
