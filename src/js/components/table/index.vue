@@ -1,6 +1,7 @@
 
 <template>
-  <div> <table class="table">
+  <div>     <navbar @openDropdown="azade"></navbar>
+    <table class="table">
     <thead @click="onClick">
     <tr>
       <th scope="col" class="index-thead">ردیف</th>
@@ -20,7 +21,10 @@
 
 </template>
 <script>
+import navbar from '../navbar/index';
+
 import singleTable from './partials/singleTable';
+import Component from "vue-class-component";
 
 export default {
   name: 'Table',
@@ -33,6 +37,8 @@ export default {
 
 
   },
+
+
   data(){
     return{
       dataSample: [
@@ -64,9 +70,13 @@ export default {
     onClick() {
       this.$emit('onClick');
     },
+    azade(){
+      console.log('azade')
+    }
   },
   components:{
-    singleTable
+    singleTable,
+    navbar
   }
 };
 </script>
