@@ -17,11 +17,8 @@ label
     border-radius: 8px ;
   }
   &.paid-bg{
-    padding: 3px 5px !important;
     border-radius: 8px !important;
-    i{
-      font-size: 15px;
-    }
+
   }
 
   .icon-badge{
@@ -30,27 +27,27 @@ label
       margin-left: 0;
     }
   }
-
-  .icon-Circle-arrow-badge{
-    &:before{
-      font-size: 19px;
-    }
-  }
-  .icon-Difference-badge{
-    &:before{
-      font-size: 17px;
-    }
-  }
-  .icon-Tick-badge{
-    &:before{
-      font-size: 17px;
-    }
-  }
-  .icon-in-pay-badge{
-    &:before{
-      font-size: 17px;
-    }
-  }
+  //
+  //.icon-Circle-arrow-badge{
+  //  &:before{
+  //    font-size: 19px;
+  //  }
+  //}
+  //.icon-Difference-badge{
+  //  &:before{
+  //    font-size: 17px;
+  //  }
+  //}
+  //.icon-Tick-badge{
+  //  &:before{
+  //    font-size: 17px;
+  //  }
+  //}
+  //.icon-in-pay-badge{
+  //  &:before{
+  //    font-size: 17px;
+  //  }
+  //}
   @each $name, $bg-color, $text-color in $status-colors {
     &.#{$name} {
       background: $bg-color;

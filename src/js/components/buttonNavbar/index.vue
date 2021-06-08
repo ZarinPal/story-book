@@ -10,11 +10,12 @@ import Component from 'vue-class-component'
 import {Prop} from 'vue-property-decorator'
 @Component
 export default class myButton extends Vue {
+  @Prop({type: String}) readonly iconsName: string
   @Prop({type: String, required: true}) readonly label: string
   @Prop({type: Boolean, default: false}) readonly navbar: Boolean
   get iconClass() {
     return {
-      'icon-notification-outline': true,
+      [`icon-${this.iconsName}`]: true,
       'btn': true,
       'btn-navbar': true,
     };

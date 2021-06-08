@@ -1,6 +1,8 @@
 
 <template>
-  <div>     <navbar @openDropdown="azade"></navbar>
+  <div>     <navbar label="kjhgfg">
+    <div slot="title"><p>kjhgfrdefrgyuiol</p></div>
+  </navbar>
     <table class="table">
     <thead @click="onClick">
     <tr>

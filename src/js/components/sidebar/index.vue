@@ -19,7 +19,7 @@
         <p class="username">{{ username }}</p>
       </div>
       <div class="list-group">
-        <router-link tag="li" v-for="(tab,key) in listItem" :key="key" :to="{ name: tab.link.name}" :id="tab.titleTransKey.replace('.','-')"
+        <router-link tag="li" v-for="(tab,key) in listItem" :key="key" :to="{ name: tab.link.name, params:sidebarParams(tab)}" :id="tab.titleTransKey.replace('.','-')"
                      class="list-group-item" :class="tab.class" v-if="!tab.divider" >
           <a :href="tab.link.name">
             <i :class="tab.icon"></i>
@@ -45,11 +45,11 @@ import {Prop} from 'vue-property-decorator'
 
 @Component
 export default class sidebar extends Vue {
+  @Prop({type: Function}) readonly sidebarParams: (tab:string)=>object
   @Prop({type: String}) readonly username: string
   @Prop({type: String}) readonly src: string
   @Prop({type: String}) readonly levelName: string
   @Prop() readonly zpNumber: number
-
   @Prop({type: Boolean, default: false}) readonly goldVip: Boolean
   @Prop({type: Boolean, default: false}) readonly silverVip: Boolean
   @Prop({type: Boolean, default: false}) readonly basicLevel: Boolean
@@ -146,6 +146,9 @@ export default class sidebar extends Vue {
   public closeNav(): void {
     document.getElementById("sidebar-wrapper").classList.remove("toggle-sidebar")
     this.$emit('closeNavbar');
+
+  }
+  public sidebarParams(): void {
 
   }
 }

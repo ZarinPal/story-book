@@ -18,6 +18,7 @@ const Template = (args, { argTypes }) => ({
 export const demo = Template.bind({});
 demo.args = {
   demo:true,
-  label: 'اعلانات',
+
 };
+
 
