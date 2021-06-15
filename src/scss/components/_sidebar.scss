@@ -184,9 +184,13 @@ sidebar
 .toggle-sidebar {
   width: 70px;
   height: 90vh;
+  .logo-row {
+    margin-bottom: 13px;
+    text-align: center;
+  }
 
   .avatar {
-    margin: 14px auto 14px;
+    margin:14px auto 14px;
   }
 
   .logo {
@@ -225,8 +229,10 @@ sidebar
     display: unset;
 
     &:before {
+      float: none;
+      margin-right: unset;
       font-size: 19px;
-      margin-left: 28px;
+      margin-left: unset;
     }
   }
 

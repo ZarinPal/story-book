@@ -2,8 +2,8 @@
   <div class="button-group">
     <ul class="btn-group" role="group">
       <li :class="classes"  @click="onClick">{{ label }}</li>
-      <li :class="classes"  @click="onClick">{{ label2 }}</li>
-      <li :class="classes" @click="onClick">{{ label3 }}</li>
+      <li :class="classes"  @click="active">{{ label2 }}</li>
+      <li :class="classes" @click="deActive">{{ label3 }}</li>
     </ul>
 
   </div>
@@ -28,8 +28,13 @@ export default class ButtonGroup extends Vue {
     };
   }
   public onClick(): void {
-    this.activeItem=!this.activeItem;
     this.$emit('onClick');
+  }
+  public activeFilter(): void {
+    this.$emit('activeFilter');
+  }
+  public deActiveFilter(): void {
+    this.$emit('deActiveFilter');
   }
 }
 </script>

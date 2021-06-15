@@ -1,13 +1,13 @@
 <template>
-  <div class="modal-component">
-    <transition v-if="showModal" name="modal">
+  <div class="modal-component" ref="Modal">
+    <transition v-if="showModal" ref="Modal" name="modal">
       <div class="modal-mask" @keydown.esc="close()">
         <div class="modal-wrapper">
           <div class="modal-container">
             <div class="modal-header">
               <span class="icon-close" @click="close()"></span>
               <span class="modal-title">
-                 <span :class="classIcon" class=" icon-title">
+                 <span :class="classIcon"  class=" icon-title">
               </span>
                 <slot name="title">{{ title }}</slot>
               </span>
@@ -23,8 +23,6 @@
         </div>
       </div>
     </transition>
-    <my-button id="show-modal" :label="headingModal" class="button-component" @onClick="submit"></my-button>
-
   </div>
 
 </template>
@@ -42,40 +40,39 @@ import {Prop} from 'vue-property-decorator'
 
 })
 export default class Modal extends Vue {
-  @Prop({type: String}) readonly headingModal: string
   @Prop({type: String}) readonly title: string
   @Prop({type: String}) readonly content: string
   @Prop({type: String}) readonly buttonAction: string
   @Prop({type: String, default: 'btn-primary'}) readonly classButton: string
-  @Prop({type: String}) readonly icons: string
   @Prop({type: String}) readonly buttonSecondaryAction: string
   @Prop({type: Boolean, default: false}) readonly blue: Boolean
   @Prop({type: Boolean, default: false}) readonly remove: Boolean
   @Prop({type: Boolean, default: false}) readonly green: Boolean
-  private showModal: boolean = false
+  @Prop({type: String}) readonly iconsName: string
 
+  private showModal: boolean = false
+  $refs!: {
+    Modal: Modal
+  }
   get classIcon() {
     return {
-      'blue-bg': this.blue,
-      'icon-outline-receipt-noborder': this.blue,
-      'red-bg': this.remove,
-      'icon-delete': this.remove,
-      'green-bg': this.green,
-      'icon-add': this.green,
+      [`icon-${this.iconsName}`]: true,
 
+      'blue-bg': this.blue,
+      'red-bg': this.remove,
+      'green-bg': this.green,
     };
   }
 
+
   public close(): void {
-    console.log('close')
     this.showModal = false;
   }
-
-  public submit(): void {
+  public open(): void {
     this.showModal = true;
-    console.log('submit')
-    this.$emit('submit');
   }
+
+
 
 }
 </script>

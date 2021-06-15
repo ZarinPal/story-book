@@ -148,8 +148,6 @@ export default class sidebar extends Vue {
     this.$emit('closeNavbar');
 
   }
-  public sidebarParams(): void {
 
-  }
 }
 </script>

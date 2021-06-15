@@ -23,6 +23,8 @@ goldLevel.args = {
   levelName: 'طلایی',
   zpNumber: '4567',
   username: 'سیده آزاده میرنظامی',
+  sidebarParams:()=> {
+  }
 };
 export const goldVip = Template.bind({});
 goldVip.args = {

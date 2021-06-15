@@ -1,14 +1,14 @@
 <template>
   <div class="row navbar" dir="rtl">
-    <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12 ">
+    <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12 ">
       <div class="pull-right" @click="toggle" v-if="pullRight">
         <slot name="right-part"></slot>
         <div class="icon-store"></div>
-        <span class="heading" @click="test">{{ labelDropDown }}</span>
+        <span class="heading" >{{ labelDropDown }}</span>
         <i class="icon-drop-down"></i>
       </div>
     </div>
-    <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 ">
+    <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 ">
       <div class="pull-left">
         <slot name="left-part"></slot>
         <div class="avatar" @click="showProfileDropdown"><img :src="src"></div>
@@ -29,14 +29,6 @@ export default class navbar extends Vue {
   @Prop({type: Boolean, default: false}) readonly demo: Boolean
   @Prop({type: Boolean, default: true}) readonly pullRight: Boolean
   @Prop({type: String, default: 'نمای کلی'}) readonly labelDropDown: string
-
-
-  public onClick(): void {
-    this.$emit('onClick');
-  }
-
-  public test(): void {
-  }
 
   public toggle(): void {
     this.$emit('openDropdown');

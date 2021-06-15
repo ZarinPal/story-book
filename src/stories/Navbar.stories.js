@@ -1,5 +1,4 @@
 import navbar from '../js/components/navbar/index.vue';
-import MyButtonNavbar from '../js/components/buttonNavbar/index.vue';
 
 export default {
   title: 'Example/navbar',
