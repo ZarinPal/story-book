@@ -12,7 +12,7 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { ButtonGroup },
-  template: '<ButtonGroup @onClick="onClick" v-bind="$props" />',
+  template: '<ButtonGroup  v-bind="$props" />',
 });
 
 

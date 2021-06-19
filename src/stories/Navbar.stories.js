@@ -11,7 +11,7 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { navbar },
-  template: '<navbar @onClick="onClick" v-bind="$props" />',
+  template: '<navbar v-bind="$props" />',
 });
 
 export const demo = Template.bind({});

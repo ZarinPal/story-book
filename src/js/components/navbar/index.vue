@@ -4,7 +4,7 @@
       <div class="pull-right" @click="toggle" v-if="pullRight">
         <slot name="right-part"></slot>
         <div class="icon-store"></div>
-        <span class="heading" >{{ labelDropDown }}</span>
+        <span class="heading">{{ labelDropDown }}</span>
         <i class="icon-drop-down"></i>
       </div>
     </div>
@@ -12,8 +12,8 @@
       <div class="pull-left">
         <slot name="left-part"></slot>
         <div class="avatar" @click="showProfileDropdown"><img :src="src"></div>
-
       </div>
+
     </div>
   </div>
 </template>
@@ -24,14 +24,17 @@ import Component from 'vue-class-component'
 import {Prop} from 'vue-property-decorator'
 
 @Component
+
 export default class navbar extends Vue {
   @Prop({type: String}) readonly src: string
   @Prop({type: Boolean, default: false}) readonly demo: Boolean
   @Prop({type: Boolean, default: true}) readonly pullRight: Boolean
   @Prop({type: String, default: 'نمای کلی'}) readonly labelDropDown: string
 
+
   public toggle(): void {
     this.$emit('openDropdown');
+
 
   }
 
@@ -39,6 +42,7 @@ export default class navbar extends Vue {
     this.$emit('showProfileDropdown');
 
   }
+
 }
 </script>
 
