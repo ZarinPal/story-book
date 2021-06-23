@@ -14,7 +14,7 @@ export default {
           'refah',
           'dey',
           'hekmat',
-          'Agriculture',
+          'agriculture',
           'melal',
           'tosetavon',
           'sanatmadan',
@@ -110,10 +110,10 @@ hekmat.args = {
   amount: '76545',
   iban: 'IR130570028780010957775103',
 };
-export const Agriculture = Template.bind({});
-Agriculture.args = {
-  logo: 'Agriculture',
-  Agriculture: true,
+export const agriculture = Template.bind({});
+agriculture.args = {
+  logo: 'agriculture',
+  agriculture: true,
   bankName: 'بانک کشاورزی',
   rrn: '892938820001277640002746',
   amount: '7658845',

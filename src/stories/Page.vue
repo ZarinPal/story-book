@@ -1,5 +1,7 @@
 <template>
   <article>
+    <cardBank iban="98765433456789" bankName="بانک سامان" amount="544000" logo="pasargad"></cardBank>
+
     <my-header
       :user="user"
       @onLogin="onLogin"
@@ -61,11 +63,12 @@
 <script>
 import './page.css';
 import MyHeader from './Header.vue';
+import cardBank from '../js/components/cardBank/index';
 
 export default {
   name: 'my-page',
 
-  components: { MyHeader },
+  components: { MyHeader,cardBank },
 
   props: {
     user: {

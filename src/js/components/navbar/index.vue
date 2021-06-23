@@ -13,7 +13,6 @@
         <slot name="left-part"></slot>
         <div class="avatar" @click="showProfileDropdown"><img :src="src"></div>
       </div>
-
     </div>
   </div>
 </template>

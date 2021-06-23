@@ -1,45 +1,46 @@
 @import "../gloabal/variables";
+
 /**-------------------------------------------------------------------------------------------------------------------
 card-bank-variable
 -------------------------------------------------------------------------------------------------------------------- */
 $bankLogos: (
-    "saman":("uri":"Saman.svg", "color":#20B3EA),
-    "refah":("uri":"Refah.svg", "color":#173576),
-    "dey":("uri":"Dey.svg", "color":#008B9A),
-    "hekmat":("uri":"Hekmat.svg", "color":#324C88),
-    "Agriculture":("uri":"Keshavarzi.svg", "color":#1F261A),
-    "melal":("uri":"Melall.svg", "color":#FF7F31),
-    "sanatmadan":("uri":"SanatMadan.svg", "color":#9B814C),
-    "tosetavon":("uri":"ToseeTaavon.svg", "color":#51B5D1),
-    "mellat":("uri":"Mellat.svg", "color":#BA0B22),
-    "eghtesadnovin":("uri":"EghtesadNovin.svg", "color":#662892),
-    "khavarmiane":("uri":"KhavarMianeh.svg", "color":#F29200),
-    "melli":("uri":"Melli.svg", "color":#F1AF0E),
-    "parsian":("uri":"Parsian.svg", "color":#B27D53),
-    "pasargad":("uri":"Pasargad.svg", "color":#FECC09),
-    "kosar":("uri":"Kosar.svg", "color":#AE1977),
-    "sepah":("uri":"Sepah.svg", "color":#1B5FC1),
-    "cbi":("uri":"Markazi.svg", "color":#00194A),
-    "tourismbank":("uri":"TourismBank.svg", "color":#B11116),
-    "iranzamin":("uri":"IranZamin.svg", "color":#4C2A93),
-    "mehr":("uri":"Mehr.svg", "color":#029A4C),
-    "ayandeh":("uri":"Ayandeh.svg", "color":#B27D53),
-    "zarincard":("uri":"ZarinCard.svg", "color":#ffb012),
-    "karafarin":("uri":"Karafarin.svg", "color":#AB7342),
-    "postbank":("uri":"Postbank.svg", "color":#14763E),
-    "sina":("uri":"Sina.svg", "color":#277EB5),
-    "ansar":("uri":"Ansar.svg", "color":#B27D53),
-    "citybank":("uri":"CityBank.svg", "color":#D8262C),
-    "tejarat":("uri":"Tejarat.svg", "color":#2F4A98),
-    "sarmayeh":("uri":"Sarmayeh.svg", "color":#1F1F47),
-    "tejarat-old":("uri":"Tejarat.png", "color":#263E94),
-    "saderat":("uri":"Saderat.svg", "color":#29166f),
-    "ghavamin":("uri":"Ghavamin.svg", "color":#007D3D),
-    "maskan":("uri":"Maskan.svg", "color":#EC520D),
-    "resalat":("uri":"Resalat.svg", "color":#00BBE6),
-    "noor":("uri":"Noor.svg", "color":#0BBBB9),
-    "tosesaderat":("uri":"ToseeSaderat.svg", "color":#006D08),
-    "toseetebari":("uri":"Tosee.svg", "color":#8F2426),
+        "saman":("uri":"Saman.svg", "color":#20B3EA),
+        "refah":("uri":"Refah.svg", "color":#173576),
+        "dey":("uri":"Dey.svg", "color":#008B9A),
+        "hekmat":("uri":"Hekmat.svg", "color":#324C88),
+        "agriculture":("uri":"Keshavarzi.svg", "color":#1F261A),
+        "melal":("uri":"Melall.svg", "color":#FF7F31),
+        "sanatmadan":("uri":"SanatMadan.svg", "color":#9B814C),
+        "tosetavon":("uri":"ToseeTaavon.svg", "color":#51B5D1),
+        "mellat":("uri":"Mellat.svg", "color":#BA0B22),
+        "eghtesadnovin":("uri":"EghtesadNovin.svg", "color":#662892),
+        "khavarmiane":("uri":"KhavarMianeh.svg", "color":#F29200),
+        "melli":("uri":"Melli.svg", "color":#F1AF0E),
+        "parsian":("uri":"Parsian.svg", "color":#B27D53),
+        "pasargad":("uri":"Pasargad.svg", "color":#FECC09),
+        "kosar":("uri":"Kosar.svg", "color":#AE1977),
+        "sepah":("uri":"Sepah.svg", "color":#1B5FC1),
+        "cbi":("uri":"Markazi.svg", "color":#00194A),
+        "tourismbank":("uri":"TourismBank.svg", "color":#B11116),
+        "iranzamin":("uri":"IranZamin.svg", "color":#4C2A93),
+        "mehr":("uri":"Mehr.svg", "color":#029A4C),
+        "ayandeh":("uri":"Ayandeh.svg", "color":#B27D53),
+        "zarincard":("uri":"ZarinCard.svg", "color":#ffb012),
+        "karafarin":("uri":"Karafarin.svg", "color":#AB7342),
+        "postbank":("uri":"Postbank.svg", "color":#14763E),
+        "sina":("uri":"Sina.svg", "color":#277EB5),
+        "ansar":("uri":"Ansar.svg", "color":#B27D53),
+        "citybank":("uri":"CityBank.svg", "color":#D8262C),
+        "tejarat":("uri":"Tejarat.svg", "color":#2F4A98),
+        "sarmayeh":("uri":"Sarmayeh.svg", "color":#1F1F47),
+        "tejarat-old":("uri":"Tejarat.png", "color":#263E94),
+        "saderat":("uri":"Saderat.svg", "color":#29166f),
+        "ghavamin":("uri":"Ghavamin.svg", "color":#007D3D),
+        "maskan":("uri":"Maskan.svg", "color":#EC520D),
+        "resalat":("uri":"Resalat.svg", "color":#00BBE6),
+        "noor":("uri":"Noor.svg", "color":#0BBBB9),
+        "tosesaderat":("uri":"ToseeSaderat.svg", "color":#006D08),
+        "toseetebari":("uri":"Tosee.svg", "color":#8F2426),
 );
 /**-------------------------------------------------------------------------------------------------------------------
 css for logo and card-bank
@@ -60,6 +61,7 @@ css for logo and card-bank
       background-repeat: no-repeat;
       margin-left: 4px;
       vertical-align: middle;
+      float: right;
     }
   }
   .#{$name}-card {
@@ -73,35 +75,57 @@ css for logo and card-bank
 
   }
 }
+
 /**-------------------------------------------------------------------------------------------------------------------
 global css for card-bank component
 -------------------------------------------------------------------------------------------------------------------- */
 .card-bank {
   font-family: 'IRANYekanMedium', serif;
-  div {
-    width: 100%;
+
+  .first-row{
+    min-height: 34px;
   }
   .right-align {
     text-align: right;
+    display: inline-block;
+    float: right;
   }
+
+  .left-align {
+    display: inline-block;
+    float: left;
+  }
+
   .pull-right {
     float: right;
   }
+
   .pull-left {
     float: left;
   }
+
+  .name {
+    font-family: 'IRANYekanMedium', serif;
+    font-size: 13px;margin: 20px auto;
+  }
+
   .center-align {
     text-align: center;
   }
+
   .bank-name {
     color: #2d3436;
     font-size: 14px;
   }
+
   .amount {
     color: #2D3436;
     font-size: 16px;
     display: inline-block;
+    float: right;
+    padding-left: 4px;
   }
+
   .currency {
     font-size: 10px;
     color: $label;
@@ -110,6 +134,7 @@ global css for card-bank component
     border-radius: 10px;
     display: inline-block;
   }
+
   .iban {
     margin-bottom: -8px;
     margin-top: -5px;
@@ -117,32 +142,45 @@ global css for card-bank component
     text-align: center;
     border-radius: 10px;
     color: #2D3436;
+
     p {
       font-family: RobotoMono;
       padding: 5px;
     }
   }
+
   .rrn {
     background: $theadBg;
     border-radius: 10px;
+    padding: 4px 0;
 
-    p:nth-child(1) {
-      color: #636E72;
+    span:nth-child(1) {
+      color: $darkgrey;
       Font-size: 11px;
       text-align: right;
-      font-family: IRANYekanRegular;
+      font-family: 'IRANYekanRegular',sans-serif;
       display: inline-block;
-      float: right;
       padding-right: 15px;
 
     }
 
-    p:nth-child(2) {
-      color: #2D3436;
+    span:nth-child(2) {
+      color: $mainColor;
       Font-size: 11px;
-      display: inline-block;
       text-align: left;
-      padding-left: 15px;
+      font-family: 'IRANYekanRegular',sans-serif;
+      display: inline-block;
+      padding-right: 15px;
     }
   }
+}
+
+
+@media (min-width:992px) {
+  .card-bank{
+    div{
+      margin: auto;
+    }
+  }
+
 }
